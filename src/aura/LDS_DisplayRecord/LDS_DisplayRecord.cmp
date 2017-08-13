@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="record" type="Object" description="The record object to be displayed" />
+	<aura:attribute name="simpleRecord" type="Object" description="A simplified view record object to be displayed" />
+	<aura:attribute name="recordError" type="String" description="An error message bound to force:recordData" />
+
+	<force:recordData aura:id="record" 
+		layoutType="FULL"
+		mode="VIEW"
+		recordId="{!v.recordId}"
+		targetError="{!v.recordError}"
+		targetFields="{!v.simpleRecord}"
+		targetRecord="{!v.record}"
+	/>
+	
+	<div class="slds-page-header" role="banner">
+		<p class="slds-text-heading--label">{!v.simpleRecord.Name}</p>
+		<h1 class="slds-align-left slds-m-right--small slds-page-header__title slds-truncate">
+			{!v.simpleRecord.BillingCity}, {!v.simpleRecord.BillingState}
+		</h1>
+	</div>
+	
+	<c:LDS_RecordErrorMessage recordError="{!v.recordError}" />
+</aura:component>

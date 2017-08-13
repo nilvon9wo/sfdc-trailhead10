@@ -1,0 +1,13 @@
+<apex:page standardController="Property__c" standardStylesheets="false" applyBodyTag="false">
+	<apex:includeLightning />
+	<apex:stylesheet value="{!URLFOR($Resource.DHP_Resources, '/DHP_Resources/DHP_SimilarProperties.css')}"/>
+
+    <div id="content">
+        <div id="lightningComponent" ></div>
+    </div>
+	<script>
+		var recordId = '{!Property__c.Id}';
+		var myUserContext = '{!$User.UITheme}';
+	</script>
+	<apex:includeScript value="{!URLFOR($Resource.DHP_Resources, '/DHP_Resources/DHP_SimilarProperties.js')}"/>
+</apex:page>

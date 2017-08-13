@@ -1,0 +1,28 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="record" type="Object" description="The record object to be displayed" />
+	<aura:attribute name="simpleRecord" type="Object" description="A simplified view record object to be displayed" />
+	<aura:attribute name="recordError" type="String" description="An error message bound to force:recordData" />
+
+	<force:recordData aura:id="record" 
+		layoutType="FULL"
+		mode="EDIT"
+		recordId="{!v.recordId}"
+		targetError="{!v.recordError}"
+		targetFields="{!v.simpleRecord}"
+		targetRecord="{!v.record}"
+	/>
+	
+	<div class="slds-form--stacked">
+		<div class="slds-form-element">
+			<label class="slds-form-element__label" for="recordName">Name: </label>
+			<div class="slds-form-element__control">
+				<ui:outputText class="slds-input" aura:id="recordName" value="{!v.simpleRecord.Name}" /> 
+			</div>
+		</div>
+	</div>
+	
+	<c:LDS_RecordErrorMessage recordError="{!v.recordError}" />
+	
+	<lightning:input aura:id="recordName" name="recordName" label="Name" value="{!v.simpleRecord.Name}" required="true" />
+	<lightning:button variant="brand" class="slds-m-top--medium" label="Save Record" onclick="{!c.handleSaveRecord}" />  
+</aura:component>

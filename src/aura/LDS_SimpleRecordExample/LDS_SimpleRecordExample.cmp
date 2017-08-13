@@ -1,0 +1,9 @@
+<aura:component>
+	<aura:attribute name="recordId" type="String" />	
+	<aura:attribute name="record" type="Object" />	
+	<aura:attribute name="simpleRecord" type="Object" />
+	
+	<force:recordData recordId="{!v.recordId}" targetRecord="{!v.record}" targetFields="{!v.simpleREcord}" fields="Id, Name" />
+	<ui:outputText label="Record Name" value="{!v.simpleRecord.Name}" />
+</aura:component>
+ 

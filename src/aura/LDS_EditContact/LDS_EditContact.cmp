@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="contactRecord" type="Object" description="The record object to be displayed" />
+	<aura:attribute name="recordSaveError" type="String" description="An error message bound to force:recordData" />
+
+	<force:recordData aura:id="recordLoader" 
+		fields="Description, Industry, Name, Phone"
+		mode="EDIT"
+		recordId="{!v.recordId}"
+		recordUpdated="{!c.handleRecordUpdated}"
+		targetError="{!v.recordSaveError}"
+		targetFields="{!v.contactRecord}"
+	/>
+
+	<ui:outputText value="Edit Contact"/>
+	<div><lightning:input label="Contact Name" value="{!v.contactRecord.Name}" /></div>
+	<div><lightning:input label="Contact Description" value="{!v.contactRecord.Description}" /></div>
+	<div><lightning:input label="Contact Phone" value="{!v.contactRecord.Phone}" /></div>
+	<div><lightning:input label="Contact Industry" value="{!v.contactRecord.Industry}" /></div>
+	<ui:button label="Save Contact" press="!c.saveContact}" />
+		
+	<c:LDS_RecordErrorMessage recordError="{!v.recordSaveError}" />
+</aura:component>

@@ -1,0 +1,33 @@
+<aura:component controller="DHP_PropertyAuraCtrl" implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="priceRange" type="String" default="100000" />
+	<aura:attribute name="property" type="Property__c" />
+	<aura:attribute name="recordId" type="Id" />
+	<aura:attribute name="remoteRecordId" type="Id" />
+	<aura:attribute name="searchCriteria" type="String" default="Price" />
+	<aura:attribute name="showDialog" type="String" default="false" />
+	<aura:attribute name="similarProperties" type="Object[]" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:handler event="c:LX_RecordUpdated" action="{!c.doInit}" />
+	
+	<force:recordData aura:id="propertyService"
+		layoutType="FULL"
+		recordId="{!v.recordId}" 
+		recordUpdated="{!c.doInit}" 
+		targetRecord="{!v.property}"
+	/>	 
+	
+	<lightning:card class="slds-is-relative" iconName="custom:custom85" title="{! 'Similar Properties by ' + v.searchCriteria}" >
+		<div class="slds-p-left--medium slds-p-right--medium">
+			<ul class="slds-list--vertical slds-has-dividers--top-space">
+				<aura:iteration items="{!v.similarProperties}" var="property" indexVar="i">
+					<li class="slds-list__item">
+						<c:DHP_SimilarProperty propertyId="{!property.Id}" remoteRecordId="{!v.remoteRecordId}" showDialog="{!v.showDialog}" /> 
+					</li>
+				</aura:iteration>
+			</ul>
+		</div>
+	    <lightning:spinner variant="brand"  aura:id="spinner" size="large"/>
+		<c:DHP_SimilarPropertyEdit remoteRecordId="{!v.remoteRecordId}" showDialog="{!v.showDialog}" />
+	</lightning:card>
+</aura:component>

@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="contactRecord" type="Object" description="The record object to be displayed" />
+	<aura:attribute name="recordLoaderError" type="String" description="An error message bound to force:recordData" />
+
+	<force:recordData aura:id="recordLoader" 
+		fields="Description, Industry, Name, Phone"
+		recordId="{!v.recordId}"
+		targetError="{!v.recordLoaderError}"
+		targetFields="{!v.contactRecord}"
+	/>
+
+	<ui:outputText value="Contact"/>
+	<div>Name: <ui:outputText value="{!v.contactRecord.Name}" /></div>
+	<div>Description: <ui:outputText value="{!v.contactRecord.Description}" /></div>
+	<div>Phone: <ui:outputText value="{!v.contactRecord.Phone}" /></div>
+	<div>Industry: <ui:outputText value="{!v.contactRecord.Industry}" /></div>
+	
+	<c:LDS_RecordErrorMessage recordError="{!v.recordLoaderError}" />
+</aura:component>

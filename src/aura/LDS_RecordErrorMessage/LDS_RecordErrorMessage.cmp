@@ -1,0 +1,11 @@
+<aura:component >
+	<aura:attribute access="public" name="recordError" type="String" description="An error message bound to force:recordData" />
+
+	<aura:if isTrue="{!not(empty(v.recordError))}">
+		<div class="recordError">
+			<ui:message title="Error" closable="true" severity="error">
+				{!v.recordError}
+			</ui:message>
+		</div>
+	</aura:if>	
+</aura:component>

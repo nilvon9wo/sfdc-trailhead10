@@ -1,0 +1,26 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="newContact" type="Object" description="The record object to be displayed" />
+	<aura:attribute name="simpleNewContact" type="Object" description="A simplified view record object to be displayed" />
+	<aura:attribute name="newContactError" type="String" description="An error message bound to force:recordData" />
+	<force:recordData aura:id="contactRecordCreator" 
+		layoutType="FULL"
+		targetError="{!v.newContactError}"
+		targetFields="{!v.simpleNewContact}"
+		targetRecord="{!v.newContact}"
+	/>
+	
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<div class="slds-page-header" role="banner">
+		<p class="slds-text-heading--label">Create Contact</p>
+	</div>
+	
+	<c:LDS_RecordErrorMessage recordError="{!v.newContactError}" />
+
+	<div class="slds-form--stacked">
+		<lightning:input aura:id="contactField" name="firstName" label="First Name" value="{!v.simpleNewContact.FirstName}" required="true" />
+		<lightning:input aura:id="contactField" name="lastName" label="Last Name" value="{!v.simpleNewContact.LastName}" required="true" />
+		<lightning:input aura:id="contactField" name="title" label="Title" value="{!v.simpleNewContact.Title}" />
+		<lightning:button variant="brand" class="slds-m-top--medium" label="Save Contact" onclick="{!c.handleSaveContact}" />
+	</div>
+</aura:component>
