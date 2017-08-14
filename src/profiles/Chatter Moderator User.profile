@@ -84,6 +84,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>DHP_PickListAuraCtrl</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DHP_PropertyAuraCtrl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -136,7 +140,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>MyPropertyController</apexClass>
+        <apexClass>SCM_GlobalDescribeWrapper</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
