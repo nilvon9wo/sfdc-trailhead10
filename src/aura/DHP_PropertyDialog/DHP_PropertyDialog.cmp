@@ -1,4 +1,4 @@
-<aura:component  access="global" implements="lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId">
+<aura:component access="global" implements="lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId">
 	<aura:attribute name="modalContext" type="String" default="New" />
     <aura:attribute name="picklistValues" type="Object" />
     <aura:attribute name="propertyRecord" type="Property__c" />

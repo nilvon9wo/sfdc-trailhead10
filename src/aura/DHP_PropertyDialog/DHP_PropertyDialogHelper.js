@@ -59,4 +59,4 @@
 		resultsToast.setParams(params);
 		resultsToast.fire();
 	}
-}) 
+})
