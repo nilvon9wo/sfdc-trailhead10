@@ -1,0 +1,48 @@
+<aura:component  access="global" implements="lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="modalContext" type="String" default="New" />
+    <aura:attribute name="picklistValues" type="Object" />
+    <aura:attribute name="propertyRecord" type="Property__c" />
+    <force:recordData aura:id="forceRecord"
+                      fields="Baths__c,Beds__c,Id,Name,Price__c,Status__c"
+                      mode="EDIT"
+                      recordId="{!v.recordId}"
+                      targetFields="{!v.propertyRecord}"
+	 />                      
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <c:DHP_PickListValues sObjectName="Property__c" fieldName="Status__c" picklistValues="{!v.picklistValues}" />
+
+    <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+ 	       <div class="slds-modal__header">
+           		<h2 class="slds-text-heading--medium">{!v.modalContext} Record</h2>
+    	   </div>
+           <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap ">
+				<lightning:input class="slds-size--1-of-1 slds-p-horizontal_x-small"
+					aura:id="propertyName" name="propertyName" label="Property Name" value="{!v.propertyRecord.Name}" required="true"  
+				/>
+				<lightning:input class="slds-size--1-of-2 slds-p-horizontal_x-small"
+					aura:id="propertyBeds" name="propertyBeds" label="Beds" value="{!v.propertyRecord.Beds__c}" 
+				 />
+				<lightning:input class="slds-size--1-of-2 slds-p-horizontal_x-small"
+					aura:id="propertyBaths" name="propertyBaths" label="Baths" value="{!v.propertyRecord.Baths__c}" 
+				/>
+				<lightning:input class="slds-size--1-of-2 slds-p-horizontal_x-small"
+					aura:id="propertyPrice" name="propertyPrice" label="Price" value="{!v.propertyRecord.Price__c}" 
+				/>    
+				<lightning:select class="slds-size--1-of-2 slds-p-horizontal_x-small"
+					aura:id="propertyStatus" name="propertyStatus" label="Status" value="{!v.propertyRecord.Status__c}" 
+				>
+				    <aura:iteration items="{!v.picklistValues}" var="item">
+				        <option value="{!item}">{!item}</option>
+				    </aura:iteration>
+				</lightning:select>
+            </div>
+            <div class="slds-modal__footer">                
+                <lightning:button variant="neutral" label="Cancel" onclick="{!c.cancelDialog}" />
+                <lightning:button variant="brand" label="Submit" onclick="{!c.saveRecord}" />
+            </div>
+        </div>
+    </div>
+    <div class="slds-backdrop slds-backdrop--open" aura:id="overlay" ></div>
+</aura:component>
