@@ -60,4 +60,8 @@
         <name>Dreamhouse_Lightning</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>VFS_In_Development</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>
