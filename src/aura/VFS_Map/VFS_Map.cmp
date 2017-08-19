@@ -1,0 +1,11 @@
+<aura:component access="global" implements="flexipage:availableForAllPageTypes">
+	<ltng:require styles="{!$Resource.leftlet1 + '/Leaflet.css'}"
+		scripts="{!$Resource.leftlet1 + '/Leaflet.js'}"
+		afterScriptsLoaded="{!c.jsLoaded}"
+	/>
+	
+	<aura:attribute name="jsLoaded" type="Boolean" default="false"/>
+	<aura:attribute name="location" type="SObject"/>
+	
+	<div aura:id="map"></div>
+</aura:component>

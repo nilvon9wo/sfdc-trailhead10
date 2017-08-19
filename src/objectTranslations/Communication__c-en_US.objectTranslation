@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Communication</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Communications</value>
+    </caseValues>
+    <fields>
+        <label><!-- Adjective --></label>
+        <name>Adjective__c</name>
+        <picklistValues>
+            <masterLabel>cosmic</masterLabel>
+            <translation><!-- cosmic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>dry</masterLabel>
+            <translation><!-- dry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>dusty</masterLabel>
+            <translation><!-- dusty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>freezing</masterLabel>
+            <translation><!-- freezing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>gaseous</masterLabel>
+            <translation><!-- gaseous --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>moist</masterLabel>
+            <translation><!-- moist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>stinky</masterLabel>
+            <translation><!-- stinky --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Direction --></label>
+        <name>Direction__c</name>
+        <picklistValues>
+            <masterLabel>backwards</masterLabel>
+            <translation><!-- backwards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>in big figure eights</masterLabel>
+            <translation><!-- in big figure eights --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>in endless circles</masterLabel>
+            <translation><!-- in endless circles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>north</masterLabel>
+            <translation><!-- north --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>sideways</masterLabel>
+            <translation><!-- sideways --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>south</masterLabel>
+            <translation><!-- south --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>widdershins</masterLabel>
+            <translation><!-- widdershins --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Noun --></label>
+        <name>Noun__c</name>
+        <picklistValues>
+            <masterLabel>alien</masterLabel>
+            <translation><!-- alien --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>asteroid</masterLabel>
+            <translation><!-- asteroid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>astronaut</masterLabel>
+            <translation><!-- astronaut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>banana</masterLabel>
+            <translation><!-- banana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>pineapple upside-down cake</masterLabel>
+            <translation><!-- pineapple upside-down cake --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>spacecraft</masterLabel>
+            <translation><!-- spacecraft --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number --></label>
+        <name>Number__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Proper Noun --></label>
+        <name>Proper_Noun__c</name>
+        <picklistValues>
+            <masterLabel>Adam Seligman</masterLabel>
+            <translation><!-- Adam Seligman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Astro</masterLabel>
+            <translation><!-- Astro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charlie Isaacs</masterLabel>
+            <translation><!-- Charlie Isaacs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cloudy</masterLabel>
+            <translation><!-- Cloudy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Codey</masterLabel>
+            <translation><!-- Codey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Earnie</masterLabel>
+            <translation><!-- Earnie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hootie McOwlface</masterLabel>
+            <translation><!-- Hootie McOwlface --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jeff Douglas</masterLabel>
+            <translation><!-- Jeff Douglas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sarah Franklin</masterLabel>
+            <translation><!-- Sarah Franklin --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Verb --></label>
+        <name>Verb__c</name>
+        <picklistValues>
+            <masterLabel>doing the robot (literally)</masterLabel>
+            <translation><!-- doing the robot (literally) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>moonwalking</masterLabel>
+            <translation><!-- moonwalking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>red-dirt rolling</masterLabel>
+            <translation><!-- red-dirt rolling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>shimmy-shammying</masterLabel>
+            <translation><!-- shimmy-shammying --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>two-stepping</masterLabel>
+            <translation><!-- two-stepping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>whirling</masterLabel>
+            <translation><!-- whirling --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,5 +1,3 @@
-Build a Lightning Component to Override a Standard Action
-
-
-TODO:
-Security for Lightning Components
+ Lightning Component Skills & Tools
+ Lightning Component Core Concepts
+ Lightning Component Tips & Gotchas

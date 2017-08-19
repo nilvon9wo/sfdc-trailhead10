@@ -5,14 +5,11 @@
     <formFactors>Large</formFactors>
     <navType>Standard</navType>
     <tab>standard-home</tab>
-    <tab>standard-Chatter</tab>
-    <tab>standard-WaveHome</tab>
+    <tab>Weather_Alerts</tab>
     <tab>standard-Opportunity</tab>
-    <tab>standard-Quote</tab>
     <tab>standard-Lead</tab>
     <tab>standard-Task</tab>
     <tab>standard-File</tab>
-    <tab>standard-ContentNote</tab>
     <tab>standard-Account</tab>
     <tab>standard-Contact</tab>
     <tab>standard-Campaign</tab>
@@ -23,8 +20,6 @@
     <tab>standard-Event</tab>
     <tab>standard-OtherUserProfile</tab>
     <tab>standard-Case</tab>
-    <tab>standard-News</tab>
     <tab>standard-ForecastingLightning</tab>
-    <tab>standard-EinsteinAnalytics</tab>
     <uiType>Lightning</uiType>
 </CustomApplication>

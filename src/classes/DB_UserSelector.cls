@@ -15,5 +15,4 @@ public virtual class DB_UserSelector extends fflib_SObjectSelector {
     public List<User> selectById(Set<Id> idSet) {
    		return (List<User>) selectSObjectsById(idSet);
     }
-    
 }
