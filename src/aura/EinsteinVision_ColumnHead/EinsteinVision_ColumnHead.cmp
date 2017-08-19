@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="title" type="String"/>
+	<th scope="col">
+	    <div class="slds-truncate" title="{!v.title}">{!v.title}</div>
+	</th>
+</aura:component>

@@ -64,4 +64,8 @@
         <name>VFS_In_Development</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>Cat_Rescue</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>

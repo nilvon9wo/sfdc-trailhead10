@@ -1,7 +1,5 @@
 .project
 .settings/
-.idea/
-etc/secrets/
-etc/soap/Exploring-Salesforce-SOAP-API-soapui-project.xml
-IlluminatedCloud/
+etc/einstein/
+etc/new-trailheads.txt
 projectFilesBackup/
