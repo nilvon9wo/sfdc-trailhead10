@@ -7,6 +7,7 @@
     <label>In Development</label>
     <navType>Standard</navType>
     <tab>VFS_First_Component</tab>
+    <tab>SmartFridge__c</tab>
     <uiType>Lightning</uiType>
     <utilityBar>In_Development_UtilityBar</utilityBar>
 </CustomApplication>
